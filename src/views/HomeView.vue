@@ -8,9 +8,17 @@
     <button @click="spore.minusCnopka">-</button>
     <button @click="spore.plusCnopka">+</button>
    </div>
-   <br>
+   <hr>
    <div>
     This counter is: {{ spore.addOrEven }}
+   </div>
+   <hr>
+   <div>
+    <h3>Edit counter:</h3>
+    <input
+     v-model="spore.count"
+     type="Number"
+     >
    </div>
   
   </div>
@@ -18,24 +26,10 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+
 import { userCounterStore } from '@/stores/counter'
 
-const spore = userCounterStore()
-
-const  count = ref(0)
-
-// const plus = () => {
-//   count.value++
-// }
-// const minys = () => {
-//   count.value--
-// }
-// const oddOrEven = computed(() => {
-//   if (count.value % 2 === 0 ) return 'even'
-//   return 'odd'
-// })
-
+const spore = userCounterStore();
 </script>
 
 <style>
