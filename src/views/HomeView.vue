@@ -10,7 +10,7 @@
    </div>
    <br>
    <div>
-    This counter is: {{ oddOrEven }}
+    This counter is: {{ spore.addOrEven }}
    </div>
   
   </div>
@@ -25,16 +25,16 @@ const spore = userCounterStore()
 
 const  count = ref(0)
 
-const plus = () => {
-  count.value++
-}
-const minys = () => {
-  count.value--
-}
-const oddOrEven = computed(() => {
-  if (count.value % 2 === 0 ) return 'even'
-  return 'odd'
-})
+// const plus = () => {
+//   count.value++
+// }
+// const minys = () => {
+//   count.value--
+// }
+// const oddOrEven = computed(() => {
+//   if (count.value % 2 === 0 ) return 'even'
+//   return 'odd'
+// })
 
 </script>
 

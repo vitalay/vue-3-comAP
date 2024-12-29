@@ -13,6 +13,12 @@ export const userCounterStore = defineStore({
     minusCnopka() {
       this.count--
     }
+  },
+  getters: {
+    addOrEven: (state) => {
+        if (state.count % 2 === 0) return 'even'
+				return 'odd'
+    }
   } 
 
 })
