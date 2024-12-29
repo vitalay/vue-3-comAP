@@ -2,11 +2,11 @@
 <template>
   <div class="Home">
    <div class="count">
-    {{ count }}
+    {{ spore.count }}
    </div>
    <div class="button">
-    <button @click="minys">-</button>
-    <button @click="plus">+</button>
+    <button @click="spore.minusCnopka">-</button>
+    <button @click="spore.plusCnopka">+</button>
    </div>
    <br>
    <div>
@@ -19,6 +19,9 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import { userCounterStore } from '@/stores/counter'
+
+const spore = userCounterStore()
 
 const  count = ref(0)
 
