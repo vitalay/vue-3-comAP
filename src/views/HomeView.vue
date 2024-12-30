@@ -1,9 +1,7 @@
 
 <template>
   <div class="Home">
-   <div class="count">
-    {{ spore.count }}
-   </div>
+   <Counter />
    <div class="button">
     <button @click="spore.minusCnopka">-</button>
     <button @click="spore.plusCnopka">+</button>
@@ -26,6 +24,7 @@
 </template>
 
 <script setup>
+import Counter from '@/components/Counter.vue';
 
 import { userCounterStore } from '@/stores/counter'
 
